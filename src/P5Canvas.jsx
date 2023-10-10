@@ -16,7 +16,7 @@ function P5Canvas({ currentPalette, palettes, strokeWeight, numParticles}) {
   useEffect(() => {
     const sketch = (p) => {
       p.setup = () => {
-        p.createCanvas(450, 550);
+        p.createCanvas(350, 450);
         //p.createCanvas(2000, 500)
         // p.createCanvas(p.windowWidth, (p.windowWidth / 3) * 4);
         // if (p.height > p.windowHeight) {

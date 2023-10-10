@@ -12,7 +12,7 @@
 .projects-title{
   position: sticky;
   left: 0;
-  width: 100%;
+  //width: 100%;
   top: 0;
   font-size: 25px;
   font-weight: 700;
@@ -71,6 +71,10 @@
   font-size: medium;
 }
 
+.details{
+  position: relative;
+  z-index: 10;
+}
 
 .java{
   background-color: black;
@@ -160,6 +164,7 @@
     position: relative;
     margin-top: 25px;
     margin-right: 100%;
+    font-size: small;
   }
   .td-title{
     position: relative;

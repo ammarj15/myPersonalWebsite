@@ -45,7 +45,7 @@
 
 .art-canvas {
   float: right;
-  margin-right: 50px;
+  margin-right: 100px;
   margin-top: -130px;
 }
 
@@ -59,7 +59,7 @@
   .art-canvas { 
     margin-top: 130px; 
     float: left;
-    margin-left: 20px;
+    margin-left: 15px;
   }
 }
 
@@ -102,8 +102,8 @@
 }
 
 .placeholder-box {
-  width: 450px; /* Set the width to match your canvas width */
-  height: 550px; /* Set the height to match your canvas height */
+  width: 350px; /* Set the width to match your canvas width */
+  height: 450px; /* Set the height to match your canvas height */
   background-color: #f0f0f0; /* Set the background color or any other styles */
   float: right;
   margin-right: 50px;
@@ -120,7 +120,7 @@
   .placeholder-box { 
     margin-top: 130px; 
     float: left;
-    margin-left: 20px;
+    margin-left: 15px;
   }
   .generator {
     width: 100%;
