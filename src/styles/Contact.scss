@@ -1,0 +1,52 @@
+.contact_section{
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  height: 50vh;
+  background-color: black;
+  color: white;
+}
+
+.contact_title{
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 40px;
+  padding-top: 110px;
+}
+
+.contact_info{
+  font-size: 25px;
+  font-weight: 500;
+  padding-top: 110px;
+  margin-left: -180px;
+}
+
+.hr_contact{
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.bottom_info{
+  font-size: large;
+}
+
+@media screen and (max-width: 670px) {
+  .contact_title {
+    padding-top: 45px;
+  }
+  .contact_info {
+    margin-left: -210px;
+  }
+}
+
+.contact_email{
+  cursor: pointer;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.designInsp {
+  font-size: 12px;
+}
+

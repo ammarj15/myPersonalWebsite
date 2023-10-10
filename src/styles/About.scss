@@ -1,0 +1,73 @@
+.about-section {
+  position: sticky;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  height: 100vh;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.about-title{
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.about-content{
+  flex-grow: 1;
+  padding-left: 33vh;
+  padding-top: 20px;
+  margin-right: 25px;
+}
+
+@media (max-width: 960px) {
+  .about-content{
+     padding-left: 10vh;
+  }
+}
+
+.about-text{
+  padding-top: 50px;
+  font-size: large;
+  padding-right: 20px;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 840px) {
+  .about-text { 
+    font-size: 20px; 
+  }
+}
+
+h2{
+  font-size: 25px;
+}
+
+hr{
+  margin-top: 40px;
+}
+
+href{
+  font-weight: 700;
+}
+
+@media screen and (max-width: 670px) {
+  .about-section {
+   display: block;
+   height: auto;
+  }
+  .about-content{
+    padding-left: 40px;
+    //padding-top: 20px;
+  }
+  .about-text{
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
+}
+
+.get_in_touch {
+  cursor: pointer;
+}

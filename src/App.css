@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+.header-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.intro-component {
+  position: sticky;
+  top: 65px;
+  left: 0;
+  width: 100%;
+}
+
+.about-component {
+  position: sticky;
+  top: 65px;
+  left: 0;
+  width: 100%;
+}
+
+.projects-component{
+  position: sticky;
+  top: 65px;
+  left: 0;
+  width: 97%;
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 40px;
+  padding-top: 20px;
+  background-color: rgb(242, 242, 242);
+  z-index: 1;
+}
+
+@media screen and (max-width: 912px) {
+  .projects-component {
+    padding-left: 20px;
+  }
+}
+
+.art-component{
+  position: relative;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+@media screen and (max-width: 670px) {
+  .about-component {
+    position: relative;
+  }
+}
+   
+@media screen and (max-width: 670px) {
+  .projects-component {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .experience-component {
+    display: none;
+  }
+}
+
+.header-section.hidden {
+  display: none;
+}

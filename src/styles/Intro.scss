@@ -1,0 +1,23 @@
+@font-face {
+  font-family: pixelammar;
+  src: local('pixelammar'),
+       url('../fonts/pixelammar.ttf');
+}
+
+.intro-section {
+  position: sticky;
+  color: rgb(190, 190, 190);
+  background-color: #000000;
+  height: 60vh;
+  top: 0;
+  font-size: 75px;
+  padding-top: 100px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  
+}
+
+.intro_title{
+  font-family: pixelammar;
+}

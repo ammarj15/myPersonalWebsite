@@ -1,0 +1,128 @@
+.art-section {
+  position: sticky;
+  color: black;
+  background-color: white;
+  height: 100vh;
+}
+
+@media screen and (max-width: 840px) {
+  .art-section { 
+    height: 1000px; 
+  }
+}
+
+.art-title {
+  left: 0;
+  top: 0;
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+@media screen and (max-width: 860px) {
+  .art-title { 
+    font-size: 20px; 
+  }
+}
+
+.generator{
+  font-size: 20px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: black;
+  width: 70%;
+  cursor: pointer;
+  float: left;
+  margin: 20px;
+  padding: 3px;
+  outline: 2px solid black;
+  outline-offset: 3px;
+}
+
+.art-canvas {
+  float: right;
+  margin-right: 50px;
+  margin-top: -130px;
+}
+
+@media screen and (max-width: 1230px) {
+  .art-canvas { 
+    margin-top: -130px; 
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .art-canvas { 
+    margin-top: 130px; 
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+.selectors {
+  margin-top: 100px;
+  position: relative;
+  border-width: 2px;
+  color: black;
+  width: 600px;
+  height: 100px;
+  margin-left: 20px;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.button-container {
+  position: relative;
+  width: 80%;
+}
+
+@media screen and (max-width: 1140px) {
+  .selectors { 
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .selectors { 
+  margin-top: 80px;  
+  font-size: medium;
+  width: 85%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .art-break {
+    margin-top: 10px;
+  }
+}
+
+.placeholder-box {
+  width: 450px; /* Set the width to match your canvas width */
+  height: 550px; /* Set the height to match your canvas height */
+  background-color: #f0f0f0; /* Set the background color or any other styles */
+  float: right;
+  margin-right: 50px;
+  margin-top: -130px;
+}
+
+@media screen and (max-width: 1230px) {
+  .placeholder-box { 
+    margin-top: -130px; 
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .placeholder-box { 
+    margin-top: 130px; 
+    float: left;
+    margin-left: 20px;
+  }
+  .generator {
+    width: 100%;
+  }
+}
