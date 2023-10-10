@@ -7,7 +7,6 @@ import Projects from './components/Projects';
 import Art from './components/Art';
 import Contact from './components/Contact';
 import './App.css';
-import './stickyStacking.js'
 
 function App() {
   
