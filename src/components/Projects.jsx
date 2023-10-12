@@ -113,7 +113,7 @@ I utilized APIs to consume, aggregate, and display on-chain data of the NEAR tok
               <p className='details'>Cube Stats was a single-page React application I built to display secondary tokenomics data of an NFT and its associated cryptocurrency. 
               I aimed to also highlight the artwork itself. The application served as both a personal project and a tool to be used by collectors of the artwork.
               AWS was used for DevOps and CI/CD. By now the app has been deprecated but you can still check out some of the art on the page.</p>
-              <p onClick={() => window.open('https://master.d1utwbn03y9afg.amplifyapp.com/')}>Go to site</p>
+              <p className='cubesLink' onClick={() => window.open('https://master.d1utwbn03y9afg.amplifyapp.com/')}>Go to site</p>
               </div>
           ) : null}
         </container>

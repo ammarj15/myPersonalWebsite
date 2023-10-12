@@ -23,7 +23,8 @@ const About = () => {
         </div>
         <hr></hr>
         <href className="get_in_touch" onClick={() => window.open('mailto:ammarj15@gmail.com')}
->GET IN TOUCH</href>
+          >GET IN TOUCH </href>
+          <div className='mail' style={{fontSize: "47px"}}>&#9993;</div>
         </div>
         </div>
       </div>
