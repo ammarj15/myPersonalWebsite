@@ -84,7 +84,7 @@ function P5Canvas({ currentPalette, palettes, strokeWeight, numParticles}) {
     };
     
   }, 
-  []);
+  );
   
   return <div ref={canvasRef}></div>
 }

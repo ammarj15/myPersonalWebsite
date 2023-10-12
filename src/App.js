@@ -9,9 +9,22 @@ import Contact from './components/Contact';
 import './App.css';
 
 function App() {
-  
-
   const projSection = useRef();
+  const [expanded, setExpanded] = useState({
+    td: false,
+    create: false,
+    near: false,
+    cube: false,
+    bryteCall: false,
+    bacardi: false,
+  });
+
+  const handleSectionClick = (sectionId) => {
+    setExpanded((prevExpanded) => ({
+     ...prevExpanded, [sectionId]: !prevExpanded[sectionId],
+    }));
+   };
+
 
   const scrollHandler = (elmRef) => {
     console.log(elmRef);
@@ -31,13 +44,13 @@ function App() {
         <About />
       </div>
       <div className="experience-component" id="experience" onClick={() => scrollHandler(projSection)}>
-        <Experience />
+        <Experience handleSectionClick={handleSectionClick} />
       </div>
       <div className="projects-component" id="projects" ref={projSection}>
         PROJECTS
       </div>
-      <div className='projects_skills'>
-      <Projects></Projects>
+      <div className='projects_skills' id="projects">
+      <Projects expanded={expanded} setExpanded={setExpanded} handleSectionClick={handleSectionClick} ></Projects>
       </div>
       <div className="art-component" id="art">
         <Art />
