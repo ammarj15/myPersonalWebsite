@@ -159,14 +159,15 @@
 
 .hover_cont_cube{
   position: absolute;
-  top: -200px;
+  //top: -200px;
   left: 0;
   justify-content: center;
   background-color: rgb(20, 20, 20);
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
-  margin: 200px;
+  width: 75%;
+  margin-left: 12.5%;
 }
 
 .exp_cubes:hover .hover_cont_cube{
@@ -180,10 +181,10 @@
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
-  top: -100px;
+  top: -8%;
   left: 0;
   right: 0;
-  margin: 100px;
+  margin-left: 4%;
 }
 
 .exp_bac:hover .hover_cont_bac{

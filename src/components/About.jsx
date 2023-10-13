@@ -12,7 +12,7 @@ const About = () => {
         <div className='about-text'>
         <hr></hr>
         <div>
-        I graduated from the University of Miami with a Bachelors in Computer Science with additional studies in both maths and art.
+        I graduated from the University of Miami with a B.S. in Computer Science with additional studies in both maths and art.
         I've spent the last few years working and contributing to
           enterprise companies working throughout the stack.
         </div>
