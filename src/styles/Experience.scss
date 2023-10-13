@@ -6,6 +6,8 @@
   top: 0px;
   text-align: center;
   padding-bottom: 200px;
+  justify-content: center;
+  align-items: center;
 }
 
 .exp-title{
@@ -87,14 +89,16 @@
 
 .hover_cont{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  size: small;
+  top: -50%;
+  //left: 0;
+  width: 50%;
+  //size: small;
   background-color: transparent;
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  margin-left: 25%;
+  justify-content: center;
 }
 
 .td_img{
@@ -116,7 +120,7 @@
 
 .hover_cont_near{
   position: absolute;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -125,6 +129,7 @@
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  margin: 100px;
 }
 
 .near_img{
@@ -154,13 +159,14 @@
 
 .hover_cont_cube{
   position: absolute;
-  top: 0;
+  top: -200px;
   left: 0;
   justify-content: center;
   background-color: rgb(20, 20, 20);
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  margin: 200px;
 }
 
 .exp_cubes:hover .hover_cont_cube{
@@ -174,9 +180,10 @@
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
-  top: 0;
+  top: -100px;
   left: 0;
   right: 0;
+  margin: 100px;
 }
 
 .exp_bac:hover .hover_cont_bac{
@@ -195,9 +202,10 @@
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
-  top: 0;
+  top: -120px;
   left: 0;
   right: 0;
+  margin: 100px;
 }
 .exp_bryte:hover .hover_cont_bryte{
   opacity: 1;
