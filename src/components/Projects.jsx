@@ -40,8 +40,9 @@ const Projects = forwardRef(function(props, ref) {
           {tdExpanded || expanded.td ? (
             <div className='expandable'>
               <br></br>
-              <p className='details'>At TD Bank I utilized various technologies such as GitHub Actions to improve DevSecOps practices throughout the organization. By integrating automation and troubleshooting CI/CD workflows, I aimed to help to bring down time to prod by 80%.
-I took part in full-stack development on major internal TD apps such as an adjudication workstation for auto-decisioning mortgage approvals using Java on backend and Angular JS for implementation of multiple components on frontend.
+              <p className='details'>At TD Bank I took part in Fullstack development of a key credit adjudication application. I refined inter-layer communication, unit tests and improved code quality on Java backend. 
+              On the Frontend I implemented vital UI components using JS frameworks while promoting reusability and modularity.
+              I also spearheaded a team of 10+ engineers integrating GitHub Actions to automate build and test processes for applications throughout the organization aiming to bring down CI/CD workflow time to prod by 70%.
 I was an active participant of Agile ceremonies ensuring sprint tasks remained on target for me and my team.</p>
               </div>
           ) : null}
