@@ -18,6 +18,12 @@
   }
 }
 
+@media screen and (max-height: 812px){
+  .art-section{
+    height: auto;
+  }
+}
+
 .art-title {
   left: 0;
   top: 0;
