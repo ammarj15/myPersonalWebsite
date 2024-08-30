@@ -78,8 +78,9 @@ const Art = () => {
         </label>
         <hr className='art-break'></hr>
     </div>
+    <div className='art-canvas'>
     {generationCount > 0 ? (
-            <div className='art-canvas'>
+            <div className='art-canvas1'>
               <P5Canvas 
                 key={generationCount}
                 className='sketch' 
@@ -94,6 +95,7 @@ const Art = () => {
             ) : (
            <div className='placeholder-box'></div>
             )}
+            </div>
       </div>
     <p></p>
   </div>

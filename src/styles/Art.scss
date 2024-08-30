@@ -70,12 +70,28 @@
   margin-top: -70px;
 }
 
+.placeholder-box {
+  width: 594px; /* Set the width to match your canvas width */
+  height: 738px;
+  max-width: 100%;
+  display: block;
+  // // min-height: 450px;
+  background-color: white; /* Set the background color or any other styles */
+  border-style: solid;
+  border-color: lightgray;
+  border-radius: 5px;
+  // //aspect-ratio: 3/4;
+}
+
 @media screen and (max-width: 1585px) {
   .art-canvas { 
-    margin-left: 70px; 
-    // max-width: 90%;
+    margin-left: 70px;
     min-width: 350px;
     min-height: 450px;
+  }
+  .placeholder-box {
+    aspect-ratio: 594/738;
+    height: auto;
   }
 }
 
@@ -139,31 +155,7 @@
   }
 }
 
-.placeholder-box {
-  width: 594px; /* Set the width to match your canvas width */
-  height: 738px; /* Set the height to match your canvas height */
-  background-color: white; /* Set the background color or any other styles */
-  margin-right: 200px;
-  margin-top: 100px;
-  border-style: solid;
-  border-color: lightgray;
-  border-radius: 5px;
-  //aspect-ratio: 3/4;
-  display: block;
-}
-
-@media screen and (max-width: 1230px) {
-  .placeholder-box { 
-    margin-top: 130px; 
-  }
-}
-
 @media screen and (max-width: 840px) {
-  .placeholder-box { 
-    margin-top: 130px; 
-    float: left;
-    margin-left: 15px;
-  }
   .generator {
     width: 100%;
   }
