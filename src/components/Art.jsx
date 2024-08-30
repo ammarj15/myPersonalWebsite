@@ -101,9 +101,10 @@ const Art = () => {
                 />
               {imageData && <img className='image' src={imageData} alt="Generated Art"/>}
             </div>
-            ) : (
-           <div className='placeholder-box'></div>
-            )}
+            ) : (<div className='placeholder-box'></div>)}
+      {generationCount === 1 && isLoading ? (
+              <div className='placeholder-box'></div>
+            ) : <></>}
             </div>
       </div>
     <p></p>
