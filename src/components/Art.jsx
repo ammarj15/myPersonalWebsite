@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Art.scss';
 import P5Canvas from '../P5Canvas';
 import PaletteSelector from './PaletteSelector';
@@ -11,6 +11,7 @@ const Art = () => {
   const [strokeWeight, setStrokeWeight] = useState(1);
   const [numParticles, setNumParticles] = useState(1000)
   const [imageData, setImageData] = useState('');
+  const [isLoading, setIsLoading] = useState(false)
 
   const palettes = {
     goldenYellow: [[255, 223, 0], [135, 206, 250]], // Golden Yellow and Sky Blue
@@ -34,12 +35,20 @@ const Art = () => {
   }
 
   const handleImageGenerated = (base64Image) => {
+    setIsLoading(false);
     setImageData(base64Image);
   }
 
   const handleGenerateArt = () => {
+    setIsLoading(true);
     setGenerationCount(prevCount => prevCount + 1);
   }
+
+  useEffect(() => {
+    if(generationCount > 0) {
+      setIsLoading(true);
+    }
+  },[generationCount])
 
     return (
       <div className='art-section'>
@@ -49,8 +58,8 @@ const Art = () => {
   <div className='generator-canvas'>
     <div className='selectors'>
         <div className='button-container'>
-          <button className='generator' onClick={handleGenerateArt}>
-            Generate Art
+          <button className='generator' onClick={handleGenerateArt} disabled={isLoading}>
+            {isLoading ? 'Generating...' : 'Generate Art'}
           </button>    
         </div>
       <PaletteSelector palettes={palettes} handlePaletteChange={handlePaletteChange} />
