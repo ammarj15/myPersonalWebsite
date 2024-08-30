@@ -18,9 +18,12 @@
   }
 }
 
-@media screen and (max-height: 812px){
+@media screen and (max-height: 830px){
   .art-section{
     height: auto;
+  }
+  .art-canvas {
+    margin-bottom: 50px;
   }
 }
 
