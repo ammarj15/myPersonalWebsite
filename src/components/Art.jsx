@@ -7,9 +7,10 @@ import PaletteSelector from './PaletteSelector';
 
 const Art = () => {
 
-  const [generated, setGenerated] = useState(null);
+  const [generationCount, setGenerationCount]= useState(0);
   const [strokeWeight, setStrokeWeight] = useState(1);
   const [numParticles, setNumParticles] = useState(1000)
+  const [imageData, setImageData] = useState('');
 
   const palettes = {
     goldenYellow: [[255, 223, 0], [135, 206, 250]], // Golden Yellow and Sky Blue
@@ -32,18 +33,26 @@ const Art = () => {
     setNumParticles(newParticles);
   }
 
+  const handleImageGenerated = (base64Image) => {
+    setImageData(base64Image);
+  }
+
+  const handleGenerateArt = () => {
+    setGenerationCount(prevCount => prevCount + 1);
+  }
+
     return (
       <div className='art-section'>
         <div className='art-title'>
         {"While you're here play around with some algorithmically generated art!"}
         </div>
-        <div className='button-container'>
-          {generated ? (<button className='generator' onClick={() => setGenerated(!generated)}>
-            Clear</button>) 
-            : (<button className='generator' onClick={() => setGenerated(!generated) }>Generate Art</button>)
-          }
-          </div>
+  <div className='generator-canvas'>
     <div className='selectors'>
+        <div className='button-container'>
+          <button className='generator' onClick={handleGenerateArt}>
+            Generate Art
+          </button>    
+        </div>
       <PaletteSelector palettes={palettes} handlePaletteChange={handlePaletteChange} />
       <hr className='art-break'></hr>
         <label>
@@ -69,17 +78,23 @@ const Art = () => {
         </label>
         <hr className='art-break'></hr>
     </div>
-    {generated ? (
+    {generationCount > 0 ? (
             <div className='art-canvas'>
               <P5Canvas 
+                key={generationCount}
+                className='sketch' 
                 palettes={palettes} 
                 currentPalette={currentPalette} 
                 strokeWeight={strokeWeight}
                 numParticles={numParticles}
+                onImageGenerated={handleImageGenerated}
                 />
+              {imageData && <img className='image' src={imageData} alt="Generated Art"/>}
             </div>
-            ) : <div className='placeholder-box'></div>
-          } 
+            ) : (
+           <div className='placeholder-box'></div>
+            )}
+      </div>
     <p></p>
   </div>
     );
