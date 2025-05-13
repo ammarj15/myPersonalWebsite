@@ -43,7 +43,7 @@ const Projects = forwardRef(function(props, ref) {
           {ozExpanded || expanded.oz ? (
             <div className='expandable'>
               <br></br>
-              <p className='details'>Ozura is a startup operating in the fintech space where I reduced payment 
+              <p className='details'>Ozura is a fintech startup where I reduced payment 
                 dashboard load times by 90% through sophisticated caching and 
                 developed full-stack features including an advanced search functionality. I architected and built a 
                 PCI-compliant card vault for secure payment data handling. The vault implements advanced cryptography and 
