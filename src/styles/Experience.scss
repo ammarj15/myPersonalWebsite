@@ -10,14 +10,14 @@
   align-items: center;
 }
 
-.exp-title{
+.exp-title {
   padding: 75px;
   z-index: 10;
 }
 
-.exp-content{
-  font-size: 170px;
-  line-height: .9;
+.exp-content {
+  font-size: 180px;
+  line-height: 0.9;
 }
 
 @media screen and (max-width: 800px) {
@@ -26,194 +26,201 @@
   }
 }
 
-.exp_td{
-  z-index: 1;
+/* New class for containing each experience item */
+.exp-item {
   position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* Common text styling */
+.exp-text {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+/* Individual experience text styles */
+.exp_ozura:hover {
+  color: #1CEEBA;
 }
 
 .exp_td:hover {
   color: #1CEEBA;
-  cursor: pointer;
-}
-
-
-.exp_art{
-  z-index: 1;
-  position: relative;
 }
 
 .exp_art:hover {
   color: #1CEEBA;
-  cursor: pointer;
 }
 
-.exp_near{
-  z-index: 1;
-  position: relative;
-}
-
-.exp_near:hover{
+.exp_near:hover {
   color: #1CEEBA;
-  cursor: pointer;
 }
 
-.exp_cubes{
-  z-index: 1;
-  position: relative;
-}
-
-.exp_cubes:hover{
+.exp_cubes:hover {
   color: #1CEEBA;
-  cursor: pointer;
 }
 
-.exp_bryte{
-  z-index: 1;
-  position: relative;
-}
-
-.exp_bryte:hover{
+.exp_bryte:hover {
   color: #1CEEBA;
-  cursor: pointer;
 }
 
-.exp_bac{
-  z-index: 100;
-  position: relative;
-}
-
-.exp_bac:hover{
+.exp_bac:hover {
   color: #1CEEBA;
-  cursor: pointer;
 }
 
-.hover_cont{
+/* Container styles */
+.hover_cont {
   position: absolute;
-  top: -50%;
-  //left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 50%;
-  //size: small;
   background-color: transparent;
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
   margin-left: 25%;
   justify-content: center;
+  pointer-events: none; /* Important: prevents the container from blocking mouse events */
 }
 
-.td_img{
+.td_img {
   width: 100%;
   height: auto;
 }
 
-.hover_cont_gen{
+.oz_img {
+  width: 175%;
+  height: auto;
+  transform: translateX(-5%);
+}
+
+.hover_cont_gen {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
   width: 100%;
-  size: small;
   background-color: transparent;
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
-.hover_cont_near{
+.hover_cont_near {
   position: absolute;
-  top: -100px;
+  top: 50%;
   left: 0;
   right: 0;
-  bottom: 0;
+  transform: translateY(-50%);
   justify-content: center;
   background-color: transparent;
   opacity: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
-  margin: 100px;
+  pointer-events: none;
 }
 
-.near_img{
-  width: 30%; /* Set the maximum width to prevent overflow */
-  height: auto; /* Maintain the aspect ratio */
-}
-
-.art_img{
-  width: 75%; /* Set the maximum width to prevent overflow */
-  height: 350px; /* Maintain the aspect ratio */
-}
-
-.exp_td:hover .hover_cont{
-  opacity: 1;
-  transition: 0.3s ease-in;
-}
-
-.exp_art:hover .hover_cont_gen{
-  opacity: 1;
-  transition: 0.3s ease-in;
-}
-
-.exp_near:hover .hover_cont_near{
-  opacity: 1;
-  transition: 0.3s ease-in;
-}
-
-.hover_cont_cube{
-  position: absolute;
-  //top: -200px;
-  left: 0;
-  justify-content: center;
-  background-color: rgb(20, 20, 20);
-  opacity: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-  width: 75%;
-  margin-left: 12.5%;
-}
-
-.exp_cubes:hover .hover_cont_cube{
-  opacity: 1;
-  transition: 0.3s ease-in;
-}
-
-.hover_cont_bac{
-  position: absolute;
-  background-color: transparent;
-  opacity: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-  top: -8%;
-  left: 0;
-  right: 0;
-  margin-left: 4%;
-}
-
-.exp_bac:hover .hover_cont_bac{
-  opacity: 1;
-  transition: 0.3s ease-in;
-}
-
-.bac_img{
-  width: 35%;
-  height: auto;
-}
-
-.hover_cont_bryte{
-  position: absolute;
-  background-color: transparent;
-  opacity: 0;
-  z-index: -1;
-  transition: 0.3s ease-in-out;
-  top: -120px;
-  left: 0;
-  right: 0;
-  margin: 100px;
-}
-.exp_bryte:hover .hover_cont_bryte{
-  opacity: 1;
-  transition: 0.3s ease-in;
-}
-
-.bryte_img{
+.near_img {
   width: 20%;
   height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.art_img {
+  width: 75%;
+  height: 350px;
+}
+
+/* Hover effects - now triggered by the text spans */
+.exp_td:hover ~ .hover_cont {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.exp_ozura:hover ~ .hover_cont {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.exp_art:hover ~ .hover_cont_gen {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.exp_near:hover ~ .hover_cont_near {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.hover_cont_cube {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.exp_cubes:hover ~ .hover_cont_cube {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.hover_cont_bac {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.exp_bac:hover ~ .hover_cont_bac {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.bac_img {
+  width: 35%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hover_cont_bryte {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.exp_bryte:hover ~ .hover_cont_bryte {
+  opacity: 1;
+  transition: 0.3s ease-in;
+}
+
+.bryte_img {
+  width: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

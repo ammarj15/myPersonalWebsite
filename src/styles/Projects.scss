@@ -120,6 +120,15 @@
   padding: 2px;
 }
 
+.crypto{
+  background-color: black;
+  color: white;
+  margin-left: auto;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  padding: 2px;
+}
+
 .api{
   background-color: black;
   color: white;
@@ -174,6 +183,7 @@
     cursor: pointer;
     z-index: 10;
   }
+
   .plus{
     position: relative;
     float: right;

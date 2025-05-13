@@ -5,6 +5,7 @@ import Experience from './Experience';
 const Projects = forwardRef(function(props, ref) {
     const {expanded, handleSectionClick } = props;
 
+    const [ozExpanded, setOzExpanded] = useState(false);
     const [tdExpanded, setTdExpanded] = useState(false);
     const [creatExpanded, creatSetExpanded] = useState(false);
     const [nearExpanded, nearSetExpanded] = useState(false);
@@ -22,6 +23,39 @@ const Projects = forwardRef(function(props, ref) {
         <div className='projects-title'></div>
         </div>
         <div className='projects'>
+        <container className='proj-cont'>
+          <span className='expand' onClick={expanded.oz ? () => setOzExpanded(false) & toggleSection('oz') : () => setOzExpanded(!ozExpanded)}>
+            <div className='td-title' ref={ref}>Ozura</div>
+              {ozExpanded || expanded.oz ? (<div className='plus'>-</div>) 
+                : (<div className='plus'>+</div>)
+              }
+            <container className="skills">
+            <div className='java'>Typescript</div>
+            <div className ='react'>Next.js</div>
+            <div className ='angular'>Python</div>
+            <div className ='crypto'>Cryptography</div>
+            <div className ='api'>API </div>
+            <div className ='maven'>Redis</div>
+            <div className ='devsec'>DevSecOps</div>
+            <div className ='api'>PCI/DSS</div>
+            </container>
+          </span>
+          {ozExpanded || expanded.oz ? (
+            <div className='expandable'>
+              <br></br>
+              <p className='details'>Ozura is a startup operating in the fintech space where I reduced payment 
+                dashboard load times by 90% through sophisticated caching and 
+                developed full-stack features including an advanced search functionality. I architected and built a 
+                PCI-compliant card vault for secure payment data handling. The vault implements advanced cryptography and 
+                data orchestration techniques like in-house frontend elements and proxies to securely capture data.
+                As a fulltime engineer at Ozura I've been involved in establishing our DevOps infrastructure as well as 
+                taking on the role of technical product lead to help create a culture, and spearhead and organize development efforts.
+                </p>
+              </div>
+          ) : null}
+        </container>
+        <hr className='line'></hr>
+        <br></br>
         <container className='proj-cont'>
           <span className='expand' onClick={expanded.td ? () => setTdExpanded(false) & toggleSection('td') : () => setTdExpanded(!tdExpanded)}>
             <div className='td-title' ref={ref}>TD Bank</div>
@@ -43,7 +77,7 @@ const Projects = forwardRef(function(props, ref) {
               <p className='details'>At TD Bank I took part in Fullstack development of a key credit adjudication application. I refined inter-layer communication, unit tests and improved code quality on Java backend. 
               On the Frontend I implemented vital UI components using JS frameworks while promoting reusability and modularity.
               I also spearheaded a team of 10+ engineers integrating GitHub Actions to automate build and test processes for applications throughout the organization aiming to bring down CI/CD workflow time to prod by 70%.
-I was an active participant of Agile ceremonies ensuring sprint tasks remained on target for me and my team.</p>
+              I was an active participant of Agile ceremonies ensuring sprint tasks remained on target for me and my team.</p>
               </div>
           ) : null}
         </container>
@@ -89,8 +123,8 @@ I was an active participant of Agile ceremonies ensuring sprint tasks remained o
             <div className='expandable'>
               <br></br>
               <p className='details'>
-I worked on development/design of the NEAR DeFi responsive web-app using React framework.
-I utilized APIs to consume, aggregate, and display on-chain data of the NEAR token and other cryptocurrencies, trending DeFi projects, NFTs, articles, and tweets.</p>
+              I worked on development/design of the NEAR DeFi responsive web-app using React framework.
+              I utilized APIs to consume, aggregate, and display on-chain data of the NEAR token and other cryptocurrencies, trending DeFi projects, NFTs, articles, and tweets.</p>
               </div>
           ) : null}
         </container>
